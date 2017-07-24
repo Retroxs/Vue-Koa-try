@@ -14,7 +14,7 @@ app.use(logger());
 router.use('/api',api.routes());//将分离的router挂载到koa-router上
 
 app.use(router.routes()); //将路由挂在到koa上
-app.use(static_server(path.resolve("dist")));
+app.use(static_server(path.resolve("../dist")));
 
 //代理服务
 app.use(proxy({
